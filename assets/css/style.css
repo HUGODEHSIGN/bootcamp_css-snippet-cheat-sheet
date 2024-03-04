@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --rounded: 10px;
+  --spacing: 12px;
+  --spacing-md: 16px;
+  --spacing-xl: 48px;
+  --background: #2b2a3b;
+}
+
+body {
+  font-size: 16px;
+  background-color: #27273a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 8px;
+}
+
+header {
+  h1 {
+    text-align: center;
+    color: rgba(232, 102, 236, 0.6);
+  }
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  border: 2px dashed white;
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  padding-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 400px;
+  transition: 300ms ease all;
+
+  h2 {
+    position: absolute;
+    padding: var(--spacing);
+    border: 2px solid white;
+    border-radius: var(--rounded);
+    top: -26px;
+    background-color: #2b2a3b;
+    color: rgba(232, 102, 236, 0.6);
+    transition: 300ms ease;
+  }
+
+  p {
+    color: rgba(232, 102, 236, 0.6);
+  }
+
+  pre {
+    padding: var(--spacing);
+    background-color: lightgray;
+    border-radius: var(--rounded);
+    font-size: 0.9rem;
+    height: 100%;
+    color: white;
+
+    /* gradient */
+    background: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+
+    /* make pre element auto wrap */
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+
+    transition: 300ms ease all;
+  }
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1),
+    0 0 15px rgba(232, 102, 236, 1);
+
+  h2 {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1),
+      0 0 15px rgba(232, 102, 236, 1);
+  }
+
+  pre {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1),
+      0 0 15px rgba(232, 102, 236, 1);
+  }
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}
